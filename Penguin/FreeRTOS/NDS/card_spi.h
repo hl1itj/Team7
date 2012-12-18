@@ -32,12 +32,6 @@
 
 #include <nds.h>
 
-// Card bus (Old version)
-#define CARD_CR1       (*(vuint16*)0x040001A0)
-#define CARD_CR1H      (*(vuint8*)0x040001A1)
-#define CARD_EEPDATA   (*(vuint8*)0x040001A2)
-#define CARD_CR2       (*(vuint32*)0x040001A4)
-
 #define CR1_HOLD_CS		(1<<6)
 #define CR1_BUSY		(1<<7)
 #define CR1_CE			(1<<13)

@@ -1,136 +1,46 @@
 #---------------------------------------------------------------------------------
-.SUFFIXES:
+# PAlib Project Makefile by Scognito, Tom, crash and fincs
 #---------------------------------------------------------------------------------
 
-ifeq ($(strip $(DEVKITARM)),)
-$(error "Please set DEVKITARM in your environment. export DEVKITARM=<path to>devkitARM")
-endif
+#---------------------------------------------------------------------------------
+# Please uncomment (i.e. delete the '#') only one "ARM7_SELECTED" line. If unsure,
+# leave it as is (with ARM7_MP3 uncommented).
+#---------------------------------------------------------------------------------
 
-include $(DEVKITARM)/ds_rules
+ARM7_SELECTED := ARM7_MP3
+#ARM7_SELECTED := ARM7_MP3_DSWIFI
+#ARM7_SELECTED := ARM7_MAXMOD_DSWIFI
 
 #---------------------------------------------------------------------------------
-# TARGET is the name of the output
-# BUILD is the directory where object files & intermediate files will be placed
+# Be sure to change these default banner TEXTs. This is the name your project will
+# display in the DS menu (including some flash cards). Create a custom logo.bmp
+# icon for your project too!
+#---------------------------------------------------------------------------------
+
+TEXT1 := PAlib Project
+TEXT2 := Change this text
+TEXT3 := for your project!
+
+#---------------------------------------------------------------------------------
+# TARGET is the name of the file to output
+# BUILD is the directory where object files and intermediate files will be placed
 # SOURCES is a list of directories containing source code
 # INCLUDES is a list of directories containing extra header files
-#---------------------------------------------------------------------------------
-TARGET		:=	$(shell basename $(CURDIR))
-BUILD		:=	build
-SOURCES		:=	gfx FreeRTOS FreeRTOS/NDS source
-INCLUDES	:=	include build FreeRTOS/include FreeRTOS/NDS
-GRAPHICS	:=  image
-
-
-#---------------------------------------------------------------------------------
-# options for code generation
-#---------------------------------------------------------------------------------
-#ARCH	:=	-mthumb -mthumb-interwork
-ARCH	:=	-mthumb -march=armv5te -mtune=arm946e-s
-
-CFLAGS	:=	-g -Wall \
- 			-fomit-frame-pointer\
-			-ffast-math \
-			$(ARCH)
-
-#CFLAGS	+=	-DDEBUG
-CFLAGS	+=	$(INCLUDE) -DARM9
-CXXFLAGS	:= $(CFLAGS) -fno-rtti -fno-exceptions
-
-ASFLAGS	:=	-g $(ARCH)
-LDFLAGS	=	-specs=ds_arm9.specs -g $(ARCH) -Wl,-Map,$(notdir $*.map)
-
-#---------------------------------------------------------------------------------
-# any extra libraries we wish to link with the project
-#---------------------------------------------------------------------------------
-LIBS	:= -ldswifi9 -lfat -lnds9
-
-#---------------------------------------------------------------------------------
-# list of directories containing libraries, this must be the top level containing
-# include and lib
-#---------------------------------------------------------------------------------
-LIBDIRS	:=	$(LIBNDS)
- 
-#---------------------------------------------------------------------------------
-# no real need to edit anything past this point unless you need to add additional
-# rules for different file extensions
-#---------------------------------------------------------------------------------
-ifneq ($(BUILD),$(notdir $(CURDIR)))
-#---------------------------------------------------------------------------------
- 
-export OUTPUT	:=	$(CURDIR)/$(TARGET)
- 
-export VPATH	:=	$(foreach dir,$(SOURCES),$(CURDIR)/$(dir)) \
-					$(foreach dir,$(DATA),$(CURDIR)/$(dir)) \
-					$(foreach dir,$(GRAPHICS),$(CURDIR)/$(dir))
-export DEPSDIR	:=	$(CURDIR)/$(BUILD)
-
-CFILES		:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.c)))
-CPPFILES	:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.cpp)))
-SFILES		:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.s)))
-BINFILES	:=	$(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.bin)))
-PNGFILES	:=	$(foreach dir,$(GRAPHICS),$(notdir $(wildcard $(dir)/*.png)))
- 
-#---------------------------------------------------------------------------------
-# use CXX for linking C++ projects, CC for standard C
-#---------------------------------------------------------------------------------
-ifeq ($(strip $(CPPFILES)),)
-#---------------------------------------------------------------------------------
-	export LD	:=	$(CC)
-#---------------------------------------------------------------------------------
-else
-#---------------------------------------------------------------------------------
-	export LD	:=	$(CXX)
-#---------------------------------------------------------------------------------
-endif
+# AUDIO is a list of directories containing audio files for use with Maxmod
+# RELEASEPATH is the output directory (Optional)
 #---------------------------------------------------------------------------------
 
-export OFILES	:=	$(BINFILES:.bin=.o) \
-					$(PNGFILES:.png=.o) \
-					$(CPPFILES:.cpp=.o) $(CFILES:.c=.o) $(SFILES:.s=.o)
- 
-export INCLUDE	:=	$(foreach dir,$(INCLUDES),-I$(CURDIR)/$(dir)) \
-					$(foreach dir,$(LIBDIRS),-I$(dir)/include) \
-					-I$(CURDIR)/$(BUILD)
- 
-export LIBPATHS	:=	$(foreach dir,$(LIBDIRS),-L$(dir)/lib)
- 
-.PHONY: $(BUILD) clean
- 
-#---------------------------------------------------------------------------------
-$(BUILD):
-	@[ -d $@ ] || mkdir -p $@
-	@make --no-print-directory -C $(BUILD) -f $(CURDIR)/Makefile
- 
-#---------------------------------------------------------------------------------
-clean:
-	@echo clean ...
-	@rm -fr $(BUILD) $(TARGET).elf $(TARGET).nds $(TARGET).ds.gba 
- 
- 
-#---------------------------------------------------------------------------------
-else
- 
-DEPENDS	:=	$(OFILES:.o=.d)
- 
-#---------------------------------------------------------------------------------
-# main targets
-#---------------------------------------------------------------------------------
-$(OUTPUT).nds	: 	$(OUTPUT).elf
-$(OUTPUT).elf	:	$(OFILES)
- 
-#---------------------------------------------------------------------------------
-%.o	:	%.bin
-#---------------------------------------------------------------------------------
-	@echo $(notdir $<)
-	$(bin2o)
+TARGET      := $(shell basename $(CURDIR))
+BUILD       := build
+SOURCES     := source data gfx/bin FreeRTOS FreeRTOS/NDS
+INCLUDES    := include build data gfx FreeRTOS/include FreeRTOS/NDS
+AUDIO       := audio
+RELEASEPATH := 
 
 #---------------------------------------------------------------------------------
-%.s %.h	: %.png %.grit
+# If you need to change other parts of the make process, see the PA_Makefile:
 #---------------------------------------------------------------------------------
-	grit $< -fts -o$*
- 
--include $(DEPENDS)
- 
-#---------------------------------------------------------------------------------------
-endif
-#---------------------------------------------------------------------------------------
+
+MAKEFILE_VER := ver2
+
+include $(DEVKITPRO)/PAlib/lib/PA_Makefile

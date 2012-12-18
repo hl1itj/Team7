@@ -36,7 +36,6 @@
 #include "define.h"
 #include "gdbStubAsm.h"
 
-
 static CARD_SPI_SETTINGS card_spi_settings;
 
 /*-------------------------------------------------------------------------------*/
@@ -56,21 +55,21 @@ void initSpi() {
 /*-------------------------------------------------------------------------------*/
 bool cardSpiBusy() {
 /*-------------------------------------------------------------------------------*/
-	return CARD_CR1 & CR1_BUSY;
+	return REG_AUXSPICNT & CR1_BUSY;
 }
 
 /*-------------------------------------------------------------------------------*/
 void cardSpiStart(bool hold) {
 /*-------------------------------------------------------------------------------*/
 	/* disable IRQ because it's start of a critical section */
-	CARD_CR1 = card_spi_settings.clock | (hold ? CR1_HOLD_CS : 0) | CR1_CE | /* card_spi_settings.enable_irq | */ CR1_ENABLE_SLOT;
+	REG_AUXSPICNT = card_spi_settings.clock | (hold ? CR1_HOLD_CS : 0) | CR1_CE | /* card_spi_settings.enable_irq | */ CR1_ENABLE_SLOT;
 }
 
 /*-------------------------------------------------------------------------------*/
 void cardSpiStop() {
 /*-------------------------------------------------------------------------------*/
 	/* re-enable IRQ if they should be re-enabled to end critical section */
-	CARD_CR1 = card_spi_settings.clock | card_spi_settings.enable_irq;
+	REG_AUXSPICNT = card_spi_settings.clock | card_spi_settings.enable_irq;
 }
 
 /*-------------------------------------------------------------------------------*/
@@ -117,7 +116,7 @@ char cardSpiTransfer(char c) {
 /*-------------------------------------------------------------------------------*/
 	cardSpiStart(false);			/* enable card SPI */
 
-	CARD_EEPDATA = c;				/* send charactr */
+	REG_AUXSPIDATA = c;				/* send charactr */
 	while(cardSpiBusy());			/* busy wait */
 	cardSpiStop();					/* disable card SPI */
 
@@ -127,7 +126,7 @@ char cardSpiTransfer(char c) {
 	swiDelay(12);
 #endif
 
-	return CARD_EEPDATA;
+	return REG_AUXSPIDATA;
 }
 
 /*-------------------------------------------------------------------------------*/
@@ -146,7 +145,7 @@ void cardSpiWriteBuffer(char *out, uint16 count) {
 	cardSpiStart(true);
 
 	for ( i = 0; i < count-1; i++ ) {
-		CARD_EEPDATA = out[i];		/* send character */
+		REG_AUXSPIDATA = out[i];		/* send character */
 		while(cardSpiBusy());		/* busy wait */
 		swiDelay(2000);
 	}
@@ -154,7 +153,7 @@ void cardSpiWriteBuffer(char *out, uint16 count) {
 	/* last character has to be transferred with chip select hold disabled */
 	cardSpiStart(false);
 
-	CARD_EEPDATA = out[count-1];	/* send last character */
+	REG_AUXSPIDATA = out[count-1];	/* send last character */
 	while(cardSpiBusy());			/* busy wait */
 
 	/* disable card SPI */
@@ -184,17 +183,17 @@ void cardSpiTransferBuffer(char *out, char *in, uint16 count) {
 	cardSpiStart(true);
 
 	for ( i = 0; i < count-1; i++ ) {
-		CARD_EEPDATA = out[i];		/* send character */
+		REG_AUXSPIDATA = out[i];		/* send character */
 		while(cardSpiBusy());		/* busy wait */
-		in[i] = CARD_EEPDATA;		/* receive character */
+		in[i] = REG_AUXSPIDATA;		/* receive character */
 	}
 
 	/* last character has to be transferred with chip select hold disabled */
 	cardSpiStart(false);
 
-	CARD_EEPDATA = out[count-1];	/* send last character */
+	REG_AUXSPIDATA = out[count-1];	/* send last character */
 	while(cardSpiBusy());			/* busy wait */
-	in[count-1] = CARD_EEPDATA;		/* receive character */
+	in[count-1] = REG_AUXSPIDATA;		/* receive character */
 
 	/* disable card SPI */
 	cardSpiStop();
@@ -254,7 +253,7 @@ void putDebugChar(unsigned char data)
 {
 	cardSpiStart(false);
 
-	CARD_EEPDATA = USB_DATA;
+	REG_AUXSPIDATA = USB_DATA;
 	while(cardSpiBusy());
 	cardSpiStop();
 
@@ -262,7 +261,7 @@ void putDebugChar(unsigned char data)
 
 	cardSpiStart(false);
 
-	CARD_EEPDATA = data;
+	REG_AUXSPIDATA = data;
 	while(cardSpiBusy());
 	cardSpiStop();
 
