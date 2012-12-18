@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 card_spi.o: c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/NDS/card_spi.c \
  c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/NDS/card_spi.h \
-=======
-card_spi.o: c:/micro/Penguin/FreeRTOS/NDS/card_spi.c \
- c:/micro/Penguin/FreeRTOS/NDS/card_spi.h \
->>>>>>> 0e1544b17e619df6c38fa42a88278128bac4671a
  c:/devkitPro/libnds/include/nds.h \
  c:/devkitPro/libnds/include/nds/libversion.h \
  c:/devkitPro/libnds/include/nds/ndstypes.h \
@@ -60,7 +55,6 @@ card_spi.o: c:/micro/Penguin/FreeRTOS/NDS/card_spi.c \
  c:/devkitPro/libnds/include/nds/arm9/trig_lut.h \
  c:/devkitPro/libnds/include/nds/arm9/video.h \
  c:/devkitPro/libnds/include/nds/arm9/videoGL.h \
-<<<<<<< HEAD
  c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/include/FreeRTOS.h \
  c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/include/projdefs.h \
  c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/NDS/FreeRTOSConfig.h \
@@ -73,20 +67,6 @@ card_spi.o: c:/micro/Penguin/FreeRTOS/NDS/card_spi.c \
  c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/NDS/gdbStubAsm.h
 
 c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/NDS/card_spi.h:
-=======
- c:/micro/Penguin/FreeRTOS/include/FreeRTOS.h \
- c:/micro/Penguin/FreeRTOS/include/projdefs.h \
- c:/micro/Penguin/FreeRTOS/NDS/FreeRTOSConfig.h \
- c:/micro/Penguin/FreeRTOS/include/portable.h \
- c:/micro/Penguin/FreeRTOS/NDS/portmacro.h \
- c:/micro/Penguin/FreeRTOS/include/mpu_wrappers.h \
- c:/micro/Penguin/FreeRTOS/include/semphr.h \
- c:/micro/Penguin/FreeRTOS/include/queue.h \
- c:/micro/Penguin/FreeRTOS/NDS/define.h \
- c:/micro/Penguin/FreeRTOS/NDS/gdbStubAsm.h
-
-c:/micro/Penguin/FreeRTOS/NDS/card_spi.h:
->>>>>>> 0e1544b17e619df6c38fa42a88278128bac4671a
 
 c:/devkitPro/libnds/include/nds.h:
 
@@ -198,7 +178,6 @@ c:/devkitPro/libnds/include/nds/arm9/video.h:
 
 c:/devkitPro/libnds/include/nds/arm9/videoGL.h:
 
-<<<<<<< HEAD
 c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/include/FreeRTOS.h:
 
 c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/include/projdefs.h:
@@ -218,24 +197,3 @@ c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/include/queue.h:
 c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/NDS/define.h:
 
 c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/NDS/gdbStubAsm.h:
-=======
-c:/micro/Penguin/FreeRTOS/include/FreeRTOS.h:
-
-c:/micro/Penguin/FreeRTOS/include/projdefs.h:
-
-c:/micro/Penguin/FreeRTOS/NDS/FreeRTOSConfig.h:
-
-c:/micro/Penguin/FreeRTOS/include/portable.h:
-
-c:/micro/Penguin/FreeRTOS/NDS/portmacro.h:
-
-c:/micro/Penguin/FreeRTOS/include/mpu_wrappers.h:
-
-c:/micro/Penguin/FreeRTOS/include/semphr.h:
-
-c:/micro/Penguin/FreeRTOS/include/queue.h:
-
-c:/micro/Penguin/FreeRTOS/NDS/define.h:
-
-c:/micro/Penguin/FreeRTOS/NDS/gdbStubAsm.h:
->>>>>>> 0e1544b17e619df6c38fa42a88278128bac4671a

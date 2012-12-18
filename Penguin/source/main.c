@@ -8,12 +8,9 @@
 
 // Include PAlib so that you can use it
 #include <PA9.h>
-<<<<<<< HEAD
 #include "all_gfx.h"
 
 void screen();
-=======
->>>>>>> 0e1544b17e619df6c38fa42a88278128bac4671a
 
 int main(){
 	// Initialize PAlib
@@ -25,10 +22,7 @@ int main(){
 	while(1){
 		// Put your game logic here
 
-<<<<<<< HEAD
 		screen();
-=======
->>>>>>> 0e1544b17e619df6c38fa42a88278128bac4671a
 		// Wait until the next frame.
 		// The DS runs at 60 frames per second.
 		PA_WaitForVBL();
