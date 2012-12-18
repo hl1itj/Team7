@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 main.o: c:/Users/Misaka/workspaceB/Peguin/source/main.c \
+=======
+main.o: c:/micro/Penguin/source/main.c \
+>>>>>>> 0e1544b17e619df6c38fa42a88278128bac4671a
  c:/devkitPro/PAlib/include/nds/PA9.h c:/devkitPro/libnds/include/nds.h \
  c:/devkitPro/libnds/include/nds/libversion.h \
  c:/devkitPro/libnds/include/nds/ndstypes.h \
@@ -119,8 +123,12 @@ main.o: c:/Users/Misaka/workspaceB/Peguin/source/main.c \
  c:/devkitPro/PAlib/include/nds/arm9/PA_KeysSpecial.h \
  c:/devkitPro/PAlib/include/nds/arm9/PA_Fake16bit.h \
  c:/devkitPro/PAlib/include/nds/arm9/PA_Debug.h \
+<<<<<<< HEAD
  c:/devkitPro/PAlib/include/nds/arm9/as_lib9.h \
  c:/Users/Misaka/workspaceB/Peguin/gfx/all_gfx.h
+=======
+ c:/devkitPro/PAlib/include/nds/arm9/as_lib9.h
+>>>>>>> 0e1544b17e619df6c38fa42a88278128bac4671a
 
 c:/devkitPro/PAlib/include/nds/PA9.h:
 
@@ -365,5 +373,8 @@ c:/devkitPro/PAlib/include/nds/arm9/PA_Fake16bit.h:
 c:/devkitPro/PAlib/include/nds/arm9/PA_Debug.h:
 
 c:/devkitPro/PAlib/include/nds/arm9/as_lib9.h:
+<<<<<<< HEAD
 
 c:/Users/Misaka/workspaceB/Peguin/gfx/all_gfx.h:
+=======
+>>>>>>> 0e1544b17e619df6c38fa42a88278128bac4671a
