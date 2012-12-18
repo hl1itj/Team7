@@ -1,203 +1,202 @@
-gdbStub.o: \
- /home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/NDS/gdbStub.c \
- /home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/NDS/gdbStub.h \
- /home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/include/FreeRTOS.h \
- /home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/include/projdefs.h \
- /home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/NDS/FreeRTOSConfig.h \
- /home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/include/portable.h \
- /home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/NDS/portmacro.h \
- /home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/include/mpu_wrappers.h \
- /home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/include/task.h \
- /home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/include/list.h \
- /home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/NDS/gdbStubAsm.h \
- /home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/NDS/card_spi.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/libversion.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/ndstypes.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/bios.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/ndstypes.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/card.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/ndstypes.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/debug.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/dma.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/interrupts.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/ipc.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/memory.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/system.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/timers.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/fifocommon.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/touch.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/input.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/dynamicArray.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/linkedlist.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/background.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/video.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/sassert.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/memory.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/dma.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/boxtest.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/videoGL.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/cache.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/trig_lut.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/math.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/dynamicArray.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/cache.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/console.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/background.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/decompress.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/bios.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/exceptions.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/guitarGrip.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/image.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/pcx.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/input.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/touch.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/input.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/keyboard.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/math.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/paddle.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/pcx.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/piano.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/rumble.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/sassert.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/sound.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/sprite.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/system.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/trig_lut.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/video.h \
- /home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/videoGL.h \
- /home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/NDS/define.h
+gdbStub.o: c:/micro/Penguin/FreeRTOS/NDS/gdbStub.c \
+ c:/micro/Penguin/FreeRTOS/NDS/gdbStub.h \
+ c:/micro/Penguin/FreeRTOS/include/FreeRTOS.h \
+ c:/micro/Penguin/FreeRTOS/include/projdefs.h \
+ c:/micro/Penguin/FreeRTOS/NDS/FreeRTOSConfig.h \
+ c:/micro/Penguin/FreeRTOS/include/portable.h \
+ c:/micro/Penguin/FreeRTOS/NDS/portmacro.h \
+ c:/micro/Penguin/FreeRTOS/include/mpu_wrappers.h \
+ c:/micro/Penguin/FreeRTOS/include/task.h \
+ c:/micro/Penguin/FreeRTOS/include/list.h \
+ c:/micro/Penguin/FreeRTOS/NDS/gdbStubAsm.h \
+ c:/micro/Penguin/FreeRTOS/NDS/card_spi.h \
+ c:/devkitPro/libnds/include/nds.h \
+ c:/devkitPro/libnds/include/nds/libversion.h \
+ c:/devkitPro/libnds/include/nds/ndstypes.h \
+ c:/devkitPro/libnds/include/nds/bios.h \
+ c:/devkitPro/libnds/include/nds/ndstypes.h \
+ c:/devkitPro/libnds/include/nds/card.h \
+ c:/devkitPro/libnds/include/nds/ndstypes.h \
+ c:/devkitPro/libnds/include/nds/debug.h \
+ c:/devkitPro/libnds/include/nds/dma.h \
+ c:/devkitPro/libnds/include/nds/interrupts.h \
+ c:/devkitPro/libnds/include/nds/ipc.h \
+ c:/devkitPro/libnds/include/nds/memory.h \
+ c:/devkitPro/libnds/include/nds/system.h \
+ c:/devkitPro/libnds/include/nds/timers.h \
+ c:/devkitPro/libnds/include/nds/fifocommon.h \
+ c:/devkitPro/libnds/include/nds/touch.h \
+ c:/devkitPro/libnds/include/nds/input.h \
+ c:/devkitPro/libnds/include/nds/arm9/dynamicArray.h \
+ c:/devkitPro/libnds/include/nds/arm9/linkedlist.h \
+ c:/devkitPro/libnds/include/nds/arm9/background.h \
+ c:/devkitPro/libnds/include/nds/arm9/video.h \
+ c:/devkitPro/libnds/include/nds/arm9/sassert.h \
+ c:/devkitPro/libnds/include/nds/memory.h \
+ c:/devkitPro/libnds/include/nds/dma.h \
+ c:/devkitPro/libnds/include/nds/arm9/boxtest.h \
+ c:/devkitPro/libnds/include/nds/arm9/videoGL.h \
+ c:/devkitPro/libnds/include/nds/arm9/cache.h \
+ c:/devkitPro/libnds/include/nds/arm9/trig_lut.h \
+ c:/devkitPro/libnds/include/nds/arm9/math.h \
+ c:/devkitPro/libnds/include/nds/arm9/dynamicArray.h \
+ c:/devkitPro/libnds/include/nds/arm9/cache.h \
+ c:/devkitPro/libnds/include/nds/arm9/console.h \
+ c:/devkitPro/libnds/include/nds/arm9/background.h \
+ c:/devkitPro/libnds/include/nds/arm9/decompress.h \
+ c:/devkitPro/libnds/include/nds/bios.h \
+ c:/devkitPro/libnds/include/nds/arm9/exceptions.h \
+ c:/devkitPro/libnds/include/nds/arm9/guitarGrip.h \
+ c:/devkitPro/libnds/include/nds/arm9/image.h \
+ c:/devkitPro/libnds/include/nds/arm9/pcx.h \
+ c:/devkitPro/libnds/include/nds/arm9/input.h \
+ c:/devkitPro/libnds/include/nds/touch.h \
+ c:/devkitPro/libnds/include/nds/input.h \
+ c:/devkitPro/libnds/include/nds/arm9/keyboard.h \
+ c:/devkitPro/libnds/include/nds/arm9/math.h \
+ c:/devkitPro/libnds/include/nds/arm9/paddle.h \
+ c:/devkitPro/libnds/include/nds/arm9/pcx.h \
+ c:/devkitPro/libnds/include/nds/arm9/piano.h \
+ c:/devkitPro/libnds/include/nds/arm9/rumble.h \
+ c:/devkitPro/libnds/include/nds/arm9/sassert.h \
+ c:/devkitPro/libnds/include/nds/arm9/sound.h \
+ c:/devkitPro/libnds/include/nds/arm9/sprite.h \
+ c:/devkitPro/libnds/include/nds/system.h \
+ c:/devkitPro/libnds/include/nds/arm9/trig_lut.h \
+ c:/devkitPro/libnds/include/nds/arm9/video.h \
+ c:/devkitPro/libnds/include/nds/arm9/videoGL.h \
+ c:/micro/Penguin/FreeRTOS/NDS/define.h
 
-/home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/NDS/gdbStub.h:
+c:/micro/Penguin/FreeRTOS/NDS/gdbStub.h:
 
-/home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/include/FreeRTOS.h:
+c:/micro/Penguin/FreeRTOS/include/FreeRTOS.h:
 
-/home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/include/projdefs.h:
+c:/micro/Penguin/FreeRTOS/include/projdefs.h:
 
-/home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/NDS/FreeRTOSConfig.h:
+c:/micro/Penguin/FreeRTOS/NDS/FreeRTOSConfig.h:
 
-/home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/include/portable.h:
+c:/micro/Penguin/FreeRTOS/include/portable.h:
 
-/home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/NDS/portmacro.h:
+c:/micro/Penguin/FreeRTOS/NDS/portmacro.h:
 
-/home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/include/mpu_wrappers.h:
+c:/micro/Penguin/FreeRTOS/include/mpu_wrappers.h:
 
-/home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/include/task.h:
+c:/micro/Penguin/FreeRTOS/include/task.h:
 
-/home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/include/list.h:
+c:/micro/Penguin/FreeRTOS/include/list.h:
 
-/home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/NDS/gdbStubAsm.h:
+c:/micro/Penguin/FreeRTOS/NDS/gdbStubAsm.h:
 
-/home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/NDS/card_spi.h:
+c:/micro/Penguin/FreeRTOS/NDS/card_spi.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds.h:
+c:/devkitPro/libnds/include/nds.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/libversion.h:
+c:/devkitPro/libnds/include/nds/libversion.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/ndstypes.h:
+c:/devkitPro/libnds/include/nds/ndstypes.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/bios.h:
+c:/devkitPro/libnds/include/nds/bios.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/ndstypes.h:
+c:/devkitPro/libnds/include/nds/ndstypes.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/card.h:
+c:/devkitPro/libnds/include/nds/card.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/ndstypes.h:
+c:/devkitPro/libnds/include/nds/ndstypes.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/debug.h:
+c:/devkitPro/libnds/include/nds/debug.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/dma.h:
+c:/devkitPro/libnds/include/nds/dma.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/interrupts.h:
+c:/devkitPro/libnds/include/nds/interrupts.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/ipc.h:
+c:/devkitPro/libnds/include/nds/ipc.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/memory.h:
+c:/devkitPro/libnds/include/nds/memory.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/system.h:
+c:/devkitPro/libnds/include/nds/system.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/timers.h:
+c:/devkitPro/libnds/include/nds/timers.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/fifocommon.h:
+c:/devkitPro/libnds/include/nds/fifocommon.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/touch.h:
+c:/devkitPro/libnds/include/nds/touch.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/input.h:
+c:/devkitPro/libnds/include/nds/input.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/dynamicArray.h:
+c:/devkitPro/libnds/include/nds/arm9/dynamicArray.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/linkedlist.h:
+c:/devkitPro/libnds/include/nds/arm9/linkedlist.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/background.h:
+c:/devkitPro/libnds/include/nds/arm9/background.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/video.h:
+c:/devkitPro/libnds/include/nds/arm9/video.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/sassert.h:
+c:/devkitPro/libnds/include/nds/arm9/sassert.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/memory.h:
+c:/devkitPro/libnds/include/nds/memory.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/dma.h:
+c:/devkitPro/libnds/include/nds/dma.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/boxtest.h:
+c:/devkitPro/libnds/include/nds/arm9/boxtest.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/videoGL.h:
+c:/devkitPro/libnds/include/nds/arm9/videoGL.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/cache.h:
+c:/devkitPro/libnds/include/nds/arm9/cache.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/trig_lut.h:
+c:/devkitPro/libnds/include/nds/arm9/trig_lut.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/math.h:
+c:/devkitPro/libnds/include/nds/arm9/math.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/dynamicArray.h:
+c:/devkitPro/libnds/include/nds/arm9/dynamicArray.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/cache.h:
+c:/devkitPro/libnds/include/nds/arm9/cache.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/console.h:
+c:/devkitPro/libnds/include/nds/arm9/console.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/background.h:
+c:/devkitPro/libnds/include/nds/arm9/background.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/decompress.h:
+c:/devkitPro/libnds/include/nds/arm9/decompress.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/bios.h:
+c:/devkitPro/libnds/include/nds/bios.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/exceptions.h:
+c:/devkitPro/libnds/include/nds/arm9/exceptions.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/guitarGrip.h:
+c:/devkitPro/libnds/include/nds/arm9/guitarGrip.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/image.h:
+c:/devkitPro/libnds/include/nds/arm9/image.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/pcx.h:
+c:/devkitPro/libnds/include/nds/arm9/pcx.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/input.h:
+c:/devkitPro/libnds/include/nds/arm9/input.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/touch.h:
+c:/devkitPro/libnds/include/nds/touch.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/input.h:
+c:/devkitPro/libnds/include/nds/input.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/keyboard.h:
+c:/devkitPro/libnds/include/nds/arm9/keyboard.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/math.h:
+c:/devkitPro/libnds/include/nds/arm9/math.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/paddle.h:
+c:/devkitPro/libnds/include/nds/arm9/paddle.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/pcx.h:
+c:/devkitPro/libnds/include/nds/arm9/pcx.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/piano.h:
+c:/devkitPro/libnds/include/nds/arm9/piano.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/rumble.h:
+c:/devkitPro/libnds/include/nds/arm9/rumble.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/sassert.h:
+c:/devkitPro/libnds/include/nds/arm9/sassert.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/sound.h:
+c:/devkitPro/libnds/include/nds/arm9/sound.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/sprite.h:
+c:/devkitPro/libnds/include/nds/arm9/sprite.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/system.h:
+c:/devkitPro/libnds/include/nds/system.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/trig_lut.h:
+c:/devkitPro/libnds/include/nds/arm9/trig_lut.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/video.h:
+c:/devkitPro/libnds/include/nds/arm9/video.h:
 
-/home/hansung/ndsdev/devkitPro/libnds/include/nds/arm9/videoGL.h:
+c:/devkitPro/libnds/include/nds/arm9/videoGL.h:
 
-/home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/NDS/define.h:
+c:/micro/Penguin/FreeRTOS/NDS/define.h:

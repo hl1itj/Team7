@@ -23,41 +23,12 @@
 
 #include <queue.h>
 
-#define SEG7LED 			0x400   // Output
-#define BARLED1				0x408   // Output
-#define BARLED2				0x40C   // Output
-#define PUSH_SW				0x414   // Input
-#define KEY_MATRIX			0x410   // Input/Output
-
-#define NUM_7SEG_LED        8
-#define NUM_KEY_ROWS		4
-
-#define ENABLE_LED			0x01
-#define ENABLE_SW			0x10
-#define ENABLE_MATRIX		0x20
-
-#define VIRTUAL_SW_1		0x01
-#define VIRTUAL_SW_2		0x02
-#define VIRTUAL_SW_3		0x04
-#define VIRTUAL_SW_4		0x08
-
-#define VIRTUAL_COL_1		0x80
-#define VIRTUAL_COL_2		0x40
-#define VIRTUAL_COL_3		0x20
-#define VIRTUAL_COL_4		0x10
-
-extern int  init_virtual_io(u32 devices);
-extern u8   readb_virtual_io(u32 addr);
-extern void writeb_virtual_io(u32 addr, u8 value);
-extern void close_virtual_io(void);
-
-#define RGB(R, G, B)    (1 << 15 | (B & 0x1F) << 10 | (G & 0x1F) << 5 | (R & 0x1F))
 
 extern int init_printf(void);
 #define printf	iprintf
 
 // Key Matrix API
-extern xQueueHandle KeyQueue;
+//extern xQueueHandle KeyQueue;
 #define MAX_KEY_LOG		10
 
 void key_init(void);

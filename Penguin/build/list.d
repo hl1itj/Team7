@@ -1,23 +1,22 @@
-list.o: \
- /home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/list.c \
- /home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/include/FreeRTOS.h \
- /home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/include/projdefs.h \
- /home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/NDS/FreeRTOSConfig.h \
- /home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/include/portable.h \
- /home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/NDS/portmacro.h \
- /home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/include/mpu_wrappers.h \
- /home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/include/list.h
+list.o: c:/micro/Penguin/FreeRTOS/list.c \
+ c:/micro/Penguin/FreeRTOS/include/FreeRTOS.h \
+ c:/micro/Penguin/FreeRTOS/include/projdefs.h \
+ c:/micro/Penguin/FreeRTOS/NDS/FreeRTOSConfig.h \
+ c:/micro/Penguin/FreeRTOS/include/portable.h \
+ c:/micro/Penguin/FreeRTOS/NDS/portmacro.h \
+ c:/micro/Penguin/FreeRTOS/include/mpu_wrappers.h \
+ c:/micro/Penguin/FreeRTOS/include/list.h
 
-/home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/include/FreeRTOS.h:
+c:/micro/Penguin/FreeRTOS/include/FreeRTOS.h:
 
-/home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/include/projdefs.h:
+c:/micro/Penguin/FreeRTOS/include/projdefs.h:
 
-/home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/NDS/FreeRTOSConfig.h:
+c:/micro/Penguin/FreeRTOS/NDS/FreeRTOSConfig.h:
 
-/home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/include/portable.h:
+c:/micro/Penguin/FreeRTOS/include/portable.h:
 
-/home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/NDS/portmacro.h:
+c:/micro/Penguin/FreeRTOS/NDS/portmacro.h:
 
-/home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/include/mpu_wrappers.h:
+c:/micro/Penguin/FreeRTOS/include/mpu_wrappers.h:
 
-/home/hansung/ndsdev/nds-ide/Term_Projects/Clear/Penguin/FreeRTOS/include/list.h:
+c:/micro/Penguin/FreeRTOS/include/list.h:
