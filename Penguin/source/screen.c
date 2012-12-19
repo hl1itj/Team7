@@ -1,13 +1,12 @@
 #include <PA9.h>
 #include "all_gfx.h"
 
-#define UP_SCREEN 1
-#define DOWN_SCREEN 0
+void screen() {
 
-#define BACKGROUND_UP 1
-#define BACKGROUND_DOWN 0
+	PA_Init();
+	PA_InitVBL();
 
-#define START_NUM 0
+	PA_LoadBackground(1, 1, &map);
 
 void initScreen() {
 
@@ -17,6 +16,7 @@ void initScreen() {
 
 }
 
+<<<<<<< HEAD
 void readyScreen() {
 
 	while (1) {
@@ -33,4 +33,6 @@ void readyScreen() {
 		PA_WaitForVBL();
 
 	}
+=======
+>>>>>>> 28c48b7f82845319441174504265659accd63390
 }
