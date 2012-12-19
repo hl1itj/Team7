@@ -4,21 +4,23 @@ If you have suggestions, problems or anything please come to the PAlib forums
 Converting PAGfx.ini
 Transparent Color: Magenta
 
-1 sprites:
+2 sprites:
+  penguinNormal: 256colors, 32x32, Pal: penguinNormal_Pal, -> penguinNormal_Sprite
   PenguinSprite: 256colors, 32x128, Pal: PenguinSprite_Pal, -> PenguinSprite_Sprite
 
 4 backgrounds:
+  map : EasyBg, 256x192, Pal: map_Pal, 165 tiles -> map_Tiles and map_Map
   snowScreen1 : EasyBg, 256x192, Pal: snowScreen1_Pal, 103 tiles -> snowScreen1_Tiles and snowScreen1_Map
   snowScreen2 : EasyBg, 256x192, Pal: snowScreen2_Pal, 98 tiles -> snowScreen2_Tiles and snowScreen2_Map
   start : EasyBg, 256x192, Pal: start_Pal, 182 tiles -> start_Tiles and start_Map
-  map : EasyBg, 256x192, Pal: map_Pal, 165 tiles -> map_Tiles and map_Map
 
-5 palettes:
+6 palettes:
+  penguinNormal_Pal, 25 colors
   PenguinSprite_Pal, 40 colors
+  map_Pal, 50 colors
   snowScreen1_Pal, 22 colors
   snowScreen2_Pal, 18 colors
   start_Pal, 67 colors
-  map_Pal, 50 colors
 
 Converted in 0 minutes and 0 seconds
 

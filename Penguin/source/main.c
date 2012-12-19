@@ -31,13 +31,13 @@ int i = 0;
 #define LEVEL7 8
 
 #define SPRITE_MENU_PAL  0
- #define SPRITE_POINT_PAL 1
+#define SPRITE_POINT_PAL 1
 
 #define SPRITE_MENU   0
- #define SPRITE_POINT  1
+#define SPRITE_POINT  1
 
 #define TRUE 1
- #define FALSE 0
+#define FALSE 0
 
 
 struct penguin {
@@ -62,34 +62,58 @@ static portTASK_FUNCTION(imgLotation, pvParameters);
 static portTASK_FUNCTION(keyInput, pvParameters);
 static portTASK_FUNCTION(imgDisplay, pvParameters);
 
-void initScreen();
-void mainScreen();
-
 int main() {
 
 	PA_Init();
 	PA_InitVBL();
 
+	PA_LoadBackground(DOWN_SCREEN, BACKGROUND_DOWN, &start);
 	init();
 
-	PA_LoadSpritePal(DOWN_SCREEN, 0, (void*) PenguinSprite_Pal);
-	PA_CreateSprite(DOWN_SCREEN, 1, (void*) PenguinSprite_Sprite,
-			OBJ_SIZE_32X32, 1, 1, 80, 80);
-	PA_SetSpriteAnim(DOWN_SCREEN, 0, 2);
-	PA_SetSpriteHflip(DOWN_SCREEN, 1, 1);
+	while (1) {
+
+		if (Pad.Newpress.Start) {
+
+			PA_DeleteBg(DOWN_SCREEN, BACKGROUND_DOWN);
+			PA_DeleteSprite(DOWN_SCREEN, START_NUM);
+			PA_LoadBackground(UP_SCREEN, BACKGROUND_UP, &map);
+
+			break;
+
+		}
+
+		PA_WaitForVBL();
+
+	}
+
+	PA_LoadBackground(DOWN_SCREEN, BACKGROUND_DOWN, &snowScreen1);
+	PA_LoadSpritePal(DOWN_SCREEN, 1, (void*) PenguinSprite_Pal);
+	PA_CreateSprite(DOWN_SCREEN, // Screen
+			0, // Sprite number
+			(void*) PenguinSprite_Sprite, // Sprite name
+			OBJ_SIZE_32X32, // Sprite size
+			1, // 256 color mode
+			1, // Sprite palette number
+			pen.x, pen.y); // X and Y position on the screen
+	PA_SetSpriteAnim(DOWN_SCREEN, 0, 1);
+
+	xTaskCreate(imgDisplay, (const signed char * const)"imgDisplay", 2048,
+			(void *)NULL, tskIDLE_PRIORITY +1, NULL);
 
 	xTaskCreate(keyInput, (const signed char * const)"keyInput", 2048,
 			(void *)NULL, tskIDLE_PRIORITY +1, NULL);
-	xTaskCreate(imgDisplay, (const signed char * const)"imgDisplay", 2048,
-			(void *)NULL, tskIDLE_PRIORITY +1, NULL);
+
 	xTaskCreate(imgLotation, (const signed char * const)"imgLotation", 2048,
 			(void *)NULL, tskIDLE_PRIORITY +1, NULL);
 	vTaskStartScheduler();
 
 	while (1) {
 
+		;
 		PA_WaitForVBL();
 	}
+
+	return 0;
 }
 
 void init() {
@@ -98,8 +122,8 @@ void init() {
 	speed = 0;
 	level = LEVEL1;
 
-	pen.x = 6;
-	pen.y = 9;
+	pen.x = 120;
+	pen.y = 155;
 
 	obs[0].x = 0;
 	obs[0].y = 0;
@@ -126,7 +150,7 @@ void init() {
 static portTASK_FUNCTION(keyInput, pvParameters) {
 
 	s32 x = 120;
-	s32 y = 160;
+	s32 y = 155;
 
 	while (1) {
 
@@ -145,16 +169,14 @@ static portTASK_FUNCTION(keyInput, pvParameters) {
 
 		if (Pad.Held.Left && pen.x > 5) {
 
-			PA_StartSpriteAnim(0, 0, 4, 7, 4);
-			PA_SetSpriteHflip(0, 0, 1);
+//			PA_StartSpriteAnim(0, 0, 4, 7, 4);
 
 			pen.x -= 2;
 		}
 
 		if (Pad.Held.Right && pen.x < 236) {
 
-			PA_StartSpriteAnim(0, 0, 4, 7, 4);
-			PA_SetSpriteHflip(0, 0, 0);
+	//		PA_StartSpriteAnim(0, 0, 4, 7, 4);
 
 			pen.x += 2;
 		}
@@ -175,12 +197,9 @@ static portTASK_FUNCTION(imgDisplay, pvParameters) {
 	PA_InitText(DOWN_SCREEN, 0);
 	PA_SetTextCol(DOWN_SCREEN, 100, 100, 100);
 
-	initScreen();
-	mainScreen();
-
 	while (1) {
 
-		PA_OutputSimpleText(1, 1, 2, "Hello World!");
+//		PA_OutputSimpleText(1, 1, 2, "Hello World!");
 //		PA_OutputText(0, 0, 7, "qwerasdzzzc : %d ", pen.x);
 
 		PA_LoadBackground(DOWN_SCREEN, BACKGROUND_DOWN, &snowScreen1);
