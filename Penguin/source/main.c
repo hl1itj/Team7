@@ -10,7 +10,7 @@
 #include <PA9.h>
 #include "all_gfx.h"
 
-void readyScreen();
+void screen();
 
 int main(){
 	// Initialize PAlib
@@ -22,7 +22,7 @@ int main(){
 	while(1){
 		// Put your game logic here
 
-		readyScreen();
+		screen();
 		// Wait until the next frame.
 		// The DS runs at 60 frames per second.
 		PA_WaitForVBL();
