@@ -10,6 +10,7 @@
 #include <PA9.h>
 #include "all_gfx.h"
 
+void initScreen();
 void readyScreen();
 
 int main(){
@@ -22,6 +23,7 @@ int main(){
 	while(1){
 		// Put your game logic here
 
+		initScreen();
 		readyScreen();
 		// Wait until the next frame.
 		// The DS runs at 60 frames per second.

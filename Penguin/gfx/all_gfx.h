@@ -10,6 +10,7 @@ extern "C"{
 
 // Backgrounds:
 extern const PA_BgStruct start;
+extern const PA_BgStruct map;
 
 // Palettes:
 

@@ -9,6 +9,13 @@
 
 #define START_NUM 0
 
+void initScreen() {
+
+	PA_Init();
+	PA_LoadBackground(DOWN_SCREEN, BACKGROUND_DOWN, &start);
+	PA_WaitForVBL();
+
+}
 
 void readyScreen() {
 
@@ -18,7 +25,7 @@ void readyScreen() {
 
 			PA_DeleteBg(DOWN_SCREEN, BACKGROUND_DOWN);
 			PA_DeleteSprite(DOWN_SCREEN, START_NUM);
-			PA_LoadBackground(DOWN_SCREEN, BACKGROUND_DOWN, &start);
+			PA_LoadBackground(DOWN_SCREEN, BACKGROUND_DOWN, &map);
 			break;
 
 		}
