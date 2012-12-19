@@ -112,7 +112,7 @@ int main() {
 	PA_SetSpriteRotEnable(BACKGROUND_DOWN, 1, 0);
 	PA_SetRotset(DOWN_SCREEN, 0, 0, 2048, 2048);
 
-	PA_SetSpriteAnim(DOWN_SCREEN, 1, 1);
+	PA_SetSpriteAnim(DOWN_SCREEN, 0, 1);
 
 	xTaskCreate(keyInput, (const signed char * const)"keyInput", 2048,
 			(void *)NULL, tskIDLE_PRIORITY +1, NULL);
@@ -199,11 +199,46 @@ static portTASK_FUNCTION(imgDisplay, pvParameters) {
 
 	while (1) {
 
-		PA_LoadBackground(DOWN_SCREEN, BACKGROUND_DOWN, &snowScreen1);
-		vTaskDelay(delay);
+		int i = 0;
 
-		PA_LoadBackground(DOWN_SCREEN, BACKGROUND_DOWN, &snowScreen2);
-		vTaskDelay(delay);
+		if (i == 0) {
+
+			PA_DeleteBg(DOWN_SCREEN, BACKGROUND_DOWN);
+
+			PA_LoadBackground(DOWN_SCREEN, BACKGROUND_DOWN, &snowScreen1);
+			vTaskDelay(delay);
+
+			PA_LoadBackground(DOWN_SCREEN, BACKGROUND_DOWN, &snowScreen2);
+			vTaskDelay(delay);
+
+			i = 1;
+		}
+
+		if (i == 1) {
+
+			PA_DeleteBg(DOWN_SCREEN, BACKGROUND_DOWN);
+
+			PA_LoadBackground(DOWN_SCREEN, BACKGROUND_DOWN, &curveScreen1);
+			vTaskDelay(delay);
+
+			PA_LoadBackground(DOWN_SCREEN, BACKGROUND_DOWN, &curveScreen2);
+			vTaskDelay(delay);
+
+			i = 2;
+		}
+
+		if (i == 2) {
+
+			PA_DeleteBg(DOWN_SCREEN, BACKGROUND_DOWN);
+
+			PA_LoadBackground(DOWN_SCREEN, BACKGROUND_DOWN, &curveScreen3);
+			vTaskDelay(delay);
+
+			PA_LoadBackground(DOWN_SCREEN, BACKGROUND_DOWN, &curveScreen4);
+			vTaskDelay(delay);
+
+			i = 0;
+		}
 
 	}
 
