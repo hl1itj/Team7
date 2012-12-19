@@ -1,12 +1,29 @@
 #include <PA9.h>
 #include "all_gfx.h"
 
-void screen() {
+#define UP_SCREEN 1
+#define DOWN_SCREEN 0
 
-	PA_Init();
-	PA_InitVBL();
+#define BACKGROUND_UP 1
+#define BACKGROUND_DOWN 0
 
-	PA_LoadBackground(1, 1, &map);
+#define START_NUM 0
 
 
+void readyScreen() {
+
+	while (1) {
+
+		if (Pad.Newpress.Start) {
+
+			PA_DeleteBg(DOWN_SCREEN, BACKGROUND_DOWN);
+			PA_DeleteSprite(DOWN_SCREEN, START_NUM);
+			PA_LoadBackground(DOWN_SCREEN, BACKGROUND_DOWN, &start);
+			break;
+
+		}
+
+		PA_WaitForVBL();
+
+	}
 }
