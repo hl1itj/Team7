@@ -12,6 +12,6 @@ const PA_BgStruct snowScreen1 = {
 	snowScreen1_Map,
 	{snowScreen1_Pal},
 
-	6592,
+	6464,
 	{1536}
 };

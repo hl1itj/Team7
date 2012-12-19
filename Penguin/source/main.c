@@ -45,9 +45,9 @@ struct obstacle {
 	u8 state;
 };
 
-int level;
+u32 level;
 
-int roed;
+int road = 0;
 int delay;
 int speed;
 
@@ -56,6 +56,7 @@ struct obstacle obs[3];
 
 void init();
 void createObs();
+void UnLoad_Screen();
 
 static portTASK_FUNCTION(imgLotation, pvParameters);
 static portTASK_FUNCTION(keyInput, pvParameters);
@@ -91,7 +92,6 @@ int main() {
 	AS_SoundDefaultPlay((u8*) bgm, (u32) bgm_size, 127, 64, TRUE, 0);
 
 	PA_LoadSpritePal(DOWN_SCREEN, 1, (void*) PenguinSprite_Pal);
-	PA_LoadSpritePal(DOWN_SCREEN, 2, (void*) obstacle_Pal);
 	PA_CreateSprite(DOWN_SCREEN, // Screen
 			0, // Sprite number
 			(void*) PenguinSprite_Sprite, // Sprite name
@@ -99,7 +99,20 @@ int main() {
 			1, // 256 color mode
 			1, // Sprite palette number
 			pen.x, pen.y); // X and Y position on the screen
-	PA_SetSpriteAnim(DOWN_SCREEN, 0, 1);
+
+	PA_LoadSpritePal(DOWN_SCREEN, 2, (void*) obstacle_Pal);
+	PA_CreateSprite(DOWN_SCREEN, // Screen
+			1, // Sprite number
+			(void*) obstacle_Sprite, // Sprite name
+			OBJ_SIZE_64X32, // Sprite size
+			1, // 256 color mode
+			2, // Sprite palette number
+			90, 55); // X and Y position on the screen
+
+	PA_SetSpriteRotEnable(BACKGROUND_DOWN, 1, 0);
+	PA_SetRotset(DOWN_SCREEN, 0, 0, 2048, 2048);
+
+	PA_SetSpriteAnim(DOWN_SCREEN, 1, 1);
 
 	xTaskCreate(keyInput, (const signed char * const)"keyInput", 2048,
 			(void *)NULL, tskIDLE_PRIORITY +1, NULL);
@@ -112,6 +125,10 @@ int main() {
 	while (1) {
 		PA_WaitForVBL();
 	}
+
+	UnLoad_Screen();
+
+	return 0;
 }
 
 void init() {
@@ -119,7 +136,7 @@ void init() {
 	delay = 1000;
 	speed = 0;
 	level = LEVEL1;
-	roed = STRAIGHT;
+	road = STRAIGHT;
 
 	pen.x = 120;
 	pen.y = 155;
@@ -175,20 +192,22 @@ static portTASK_FUNCTION(keyInput, pvParameters) {
 }
 static portTASK_FUNCTION(imgDisplay, pvParameters) {
 
-	PA_InitText(DOWN_SCREEN, 0);
-	PA_SetTextCol(DOWN_SCREEN, 100, 100, 100);
+	PA_InitText(UP_SCREEN, 0);
+	PA_OutputText(UP_SCREEN, 2, 19, "STAGE:1");
+	PA_OutputText(UP_SCREEN, 10, 19, "SPEED:%d ", speed);
+	PA_OutputText(UP_SCREEN, 20, 19, "ROAD:1");
 
 	while (1) {
-
-//		PA_OutputSimpleText(1, 1, 2, "Hello World!");
-//		PA_OutputText(0, 0, 7, "qwerasdzzzc : %d ", pen.x);
 
 		PA_LoadBackground(DOWN_SCREEN, BACKGROUND_DOWN, &snowScreen1);
 		vTaskDelay(delay);
 
 		PA_LoadBackground(DOWN_SCREEN, BACKGROUND_DOWN, &snowScreen2);
 		vTaskDelay(delay);
+
 	}
+
+	PA_WaitForVBL();
 }
 
 /*
@@ -217,24 +236,16 @@ static portTASK_FUNCTION(imgLotation, pvParameters) {
 		if (cnt == 50)
 			createObs();
 
-		if (roed == RIGHT_CURVE && pen.x > MIN_WIDTH)
+		if (road == RIGHT_CURVE && pen.x > MIN_WIDTH)
 			pen.x -= 1;
 
-		if (roed == LEFT_CURVE && pen.x < MAX_WIDTH)
+		if (road == LEFT_CURVE && pen.x < MAX_WIDTH)
 			pen.x += 1;
 
 		for (i = 0; i < 4; i++) {
 
 			if (obs[i].state) {
 
-				PA_CreateSprite(DOWN_SCREEN, // Screen
-						0, // Sprite number
-						(void*) PenguinSprite_Sprite, // Sprite name
-						OBJ_SIZE_64X32, // Sprite size
-						1, // 256 color mode
-						1, // Sprite palette number
-						obs[i].x, obs[i].y); // X and Y position on the screen
-				PA_SetSpriteAnim(DOWN_SCREEN, 0, 1);
 				obs[i].y += 2;
 
 				if (obs[i].y > MAX_HIGHT)
@@ -260,15 +271,29 @@ static portTASK_FUNCTION(imgLotation, pvParameters) {
 }
 void createObs() {
 
-	int obsCreate;
-	int i;
+	u32 obsCreate;
+	u32 i;
 
 	obsCreate = 1;
 
 	for (i = 0; i < 3; i++) {
 
-		if (i == obsCreate)
+		if (i == obsCreate) {
 			obs[i].type = TRUE;
+			obs[i].x = PA_RandMinMax(35, 220);
+
+		}
+
+	}
+}
+
+void UnLoad_Screen() {
+	int i;
+
+	for (i = 0; i < 2; ++i) {
+
+		PA_ResetBgSysScreen(i);
+		PA_ResetSpriteSysScreen(i);
 	}
 }
 

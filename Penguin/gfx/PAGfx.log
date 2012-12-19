@@ -5,21 +5,21 @@ Converting PAGfx.ini
 Transparent Color: Magenta
 
 2 sprites:
-  obstacle: 256colors, 64x72, Pal: obstacle_Pal, -> obstacle_Sprite
   PenguinSprite: 256colors, 32x128, Pal: PenguinSprite_Pal, -> PenguinSprite_Sprite
+  obstacle: 256colors, 64x64, Pal: obstacle_Pal, -> obstacle_Sprite
 
 4 backgrounds:
-  map : EasyBg, 256x192, Pal: map_Pal, 165 tiles -> map_Tiles and map_Map
-  snowScreen1 : EasyBg, 256x192, Pal: snowScreen1_Pal, 103 tiles -> snowScreen1_Tiles and snowScreen1_Map
-  snowScreen2 : EasyBg, 256x192, Pal: snowScreen2_Pal, 98 tiles -> snowScreen2_Tiles and snowScreen2_Map
+  map : EasyBg, 256x192, Pal: map_Pal, 158 tiles -> map_Tiles and map_Map
+  snowScreen1 : EasyBg, 256x192, Pal: snowScreen1_Pal, 101 tiles -> snowScreen1_Tiles and snowScreen1_Map
+  snowScreen2 : EasyBg, 256x192, Pal: snowScreen2_Pal, 96 tiles -> snowScreen2_Tiles and snowScreen2_Map
   start : EasyBg, 256x192, Pal: start_Pal, 182 tiles -> start_Tiles and start_Map
 
 6 palettes:
-  obstacle_Pal, 42 colors
   PenguinSprite_Pal, 40 colors
+  obstacle_Pal, 42 colors
   map_Pal, 50 colors
-  snowScreen1_Pal, 22 colors
-  snowScreen2_Pal, 18 colors
+  snowScreen1_Pal, 21 colors
+  snowScreen2_Pal, 17 colors
   start_Pal, 67 colors
 
 Converted in 0 minutes and 0 seconds
