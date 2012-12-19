@@ -1,1 +1,1 @@
-gdbStubAsm.o: c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/NDS/gdbStubAsm.s
+gdbStubAsm.o: c:/micro/Penguin/FreeRTOS/NDS/gdbStubAsm.s

@@ -5,7 +5,7 @@ Converting PAGfx.ini
 Transparent Color: Magenta
 
 2 sprites:
-  penguinNormal: 256colors, 32x32, Pal: penguinNormal_Pal, -> penguinNormal_Sprite
+  obstacle: 256colors, 64x72, Pal: obstacle_Pal, -> obstacle_Sprite
   PenguinSprite: 256colors, 32x128, Pal: PenguinSprite_Pal, -> PenguinSprite_Sprite
 
 4 backgrounds:
@@ -15,7 +15,7 @@ Transparent Color: Magenta
   start : EasyBg, 256x192, Pal: start_Pal, 182 tiles -> start_Tiles and start_Map
 
 6 palettes:
-  penguinNormal_Pal, 25 colors
+  obstacle_Pal, 42 colors
   PenguinSprite_Pal, 40 colors
   map_Pal, 50 colors
   snowScreen1_Pal, 22 colors

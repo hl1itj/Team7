@@ -67,7 +67,7 @@ main.o: c:/micro/Penguin/source/main.c \
  c:/devkitPro/libnds/include/nds/arm9/video.h \
  c:/devkitPro/libnds/include/nds/arm9/videoGL.h \
  c:/micro/Penguin/FreeRTOS/NDS/gdbStub.h \
- c:/micro/Penguin/FreeRTOS/NDS/gdbStubAsm.h \
+ c:/micro/Penguin/FreeRTOS/NDS/gdbStubAsm.h c:/micro/Penguin/build/bgm.h \
  c:/devkitPro/PAlib/include/nds/PA9.h c:/devkitPro/libnds/include/fat.h \
  c:/devkitPro/libnds/include/libfatversion.h \
  c:/devkitPro/libnds/include/nds/disc_io.h \
@@ -273,6 +273,8 @@ c:/devkitPro/libnds/include/nds/arm9/videoGL.h:
 c:/micro/Penguin/FreeRTOS/NDS/gdbStub.h:
 
 c:/micro/Penguin/FreeRTOS/NDS/gdbStubAsm.h:
+
+c:/micro/Penguin/build/bgm.h:
 
 c:/devkitPro/PAlib/include/nds/PA9.h:
 

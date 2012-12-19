@@ -1,1 +1,1 @@
-port_asm.o: c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/NDS/port_asm.s
+port_asm.o: c:/micro/Penguin/FreeRTOS/NDS/port_asm.s

@@ -9,7 +9,7 @@ extern "C"{
 #endif
 
 // Sprites:
-extern const unsigned char penguinNormal_Sprite[1024] _GFX_ALIGN; // Palette: penguinNormal_Pal
+extern const unsigned char obstacle_Sprite[4608] _GFX_ALIGN; // Palette: obstacle_Pal
 extern const unsigned char PenguinSprite_Sprite[4096] _GFX_ALIGN; // Palette: PenguinSprite_Pal
 
 // Backgrounds:
@@ -19,7 +19,7 @@ extern const PA_BgStruct snowScreen2;
 extern const PA_BgStruct start;
 
 // Palettes:
-extern const unsigned short penguinNormal_Pal[256] _GFX_ALIGN;
+extern const unsigned short obstacle_Pal[256] _GFX_ALIGN;
 extern const unsigned short PenguinSprite_Pal[256] _GFX_ALIGN;
 
 #ifdef __cplusplus

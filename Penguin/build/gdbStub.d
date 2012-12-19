@@ -1,15 +1,15 @@
-gdbStub.o: c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/NDS/gdbStub.c \
- c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/NDS/gdbStub.h \
- c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/include/FreeRTOS.h \
- c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/include/projdefs.h \
- c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/NDS/FreeRTOSConfig.h \
- c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/include/portable.h \
- c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/NDS/portmacro.h \
- c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/include/mpu_wrappers.h \
- c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/include/task.h \
- c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/include/list.h \
- c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/NDS/gdbStubAsm.h \
- c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/NDS/card_spi.h \
+gdbStub.o: c:/micro/Penguin/FreeRTOS/NDS/gdbStub.c \
+ c:/micro/Penguin/FreeRTOS/NDS/gdbStub.h \
+ c:/micro/Penguin/FreeRTOS/include/FreeRTOS.h \
+ c:/micro/Penguin/FreeRTOS/include/projdefs.h \
+ c:/micro/Penguin/FreeRTOS/NDS/FreeRTOSConfig.h \
+ c:/micro/Penguin/FreeRTOS/include/portable.h \
+ c:/micro/Penguin/FreeRTOS/NDS/portmacro.h \
+ c:/micro/Penguin/FreeRTOS/include/mpu_wrappers.h \
+ c:/micro/Penguin/FreeRTOS/include/task.h \
+ c:/micro/Penguin/FreeRTOS/include/list.h \
+ c:/micro/Penguin/FreeRTOS/NDS/gdbStubAsm.h \
+ c:/micro/Penguin/FreeRTOS/NDS/card_spi.h \
  c:/devkitPro/libnds/include/nds.h \
  c:/devkitPro/libnds/include/nds/libversion.h \
  c:/devkitPro/libnds/include/nds/ndstypes.h \
@@ -65,29 +65,29 @@ gdbStub.o: c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/NDS/gdbStub.c \
  c:/devkitPro/libnds/include/nds/arm9/trig_lut.h \
  c:/devkitPro/libnds/include/nds/arm9/video.h \
  c:/devkitPro/libnds/include/nds/arm9/videoGL.h \
- c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/NDS/define.h
+ c:/micro/Penguin/FreeRTOS/NDS/define.h
 
-c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/NDS/gdbStub.h:
+c:/micro/Penguin/FreeRTOS/NDS/gdbStub.h:
 
-c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/include/FreeRTOS.h:
+c:/micro/Penguin/FreeRTOS/include/FreeRTOS.h:
 
-c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/include/projdefs.h:
+c:/micro/Penguin/FreeRTOS/include/projdefs.h:
 
-c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/NDS/FreeRTOSConfig.h:
+c:/micro/Penguin/FreeRTOS/NDS/FreeRTOSConfig.h:
 
-c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/include/portable.h:
+c:/micro/Penguin/FreeRTOS/include/portable.h:
 
-c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/NDS/portmacro.h:
+c:/micro/Penguin/FreeRTOS/NDS/portmacro.h:
 
-c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/include/mpu_wrappers.h:
+c:/micro/Penguin/FreeRTOS/include/mpu_wrappers.h:
 
-c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/include/task.h:
+c:/micro/Penguin/FreeRTOS/include/task.h:
 
-c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/include/list.h:
+c:/micro/Penguin/FreeRTOS/include/list.h:
 
-c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/NDS/gdbStubAsm.h:
+c:/micro/Penguin/FreeRTOS/NDS/gdbStubAsm.h:
 
-c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/NDS/card_spi.h:
+c:/micro/Penguin/FreeRTOS/NDS/card_spi.h:
 
 c:/devkitPro/libnds/include/nds.h:
 
@@ -199,4 +199,4 @@ c:/devkitPro/libnds/include/nds/arm9/video.h:
 
 c:/devkitPro/libnds/include/nds/arm9/videoGL.h:
 
-c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/NDS/define.h:
+c:/micro/Penguin/FreeRTOS/NDS/define.h:

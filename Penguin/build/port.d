@@ -1,12 +1,12 @@
-port.o: c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/NDS/port.c \
- c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/include/FreeRTOS.h \
- c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/include/projdefs.h \
- c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/NDS/FreeRTOSConfig.h \
- c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/include/portable.h \
- c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/NDS/portmacro.h \
- c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/include/mpu_wrappers.h \
- c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/include/task.h \
- c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/include/list.h \
+port.o: c:/micro/Penguin/FreeRTOS/NDS/port.c \
+ c:/micro/Penguin/FreeRTOS/include/FreeRTOS.h \
+ c:/micro/Penguin/FreeRTOS/include/projdefs.h \
+ c:/micro/Penguin/FreeRTOS/NDS/FreeRTOSConfig.h \
+ c:/micro/Penguin/FreeRTOS/include/portable.h \
+ c:/micro/Penguin/FreeRTOS/NDS/portmacro.h \
+ c:/micro/Penguin/FreeRTOS/include/mpu_wrappers.h \
+ c:/micro/Penguin/FreeRTOS/include/task.h \
+ c:/micro/Penguin/FreeRTOS/include/list.h \
  c:/devkitPro/libnds/include/nds.h \
  c:/devkitPro/libnds/include/nds/libversion.h \
  c:/devkitPro/libnds/include/nds/ndstypes.h \
@@ -63,21 +63,21 @@ port.o: c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/NDS/port.c \
  c:/devkitPro/libnds/include/nds/arm9/video.h \
  c:/devkitPro/libnds/include/nds/arm9/videoGL.h
 
-c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/include/FreeRTOS.h:
+c:/micro/Penguin/FreeRTOS/include/FreeRTOS.h:
 
-c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/include/projdefs.h:
+c:/micro/Penguin/FreeRTOS/include/projdefs.h:
 
-c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/NDS/FreeRTOSConfig.h:
+c:/micro/Penguin/FreeRTOS/NDS/FreeRTOSConfig.h:
 
-c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/include/portable.h:
+c:/micro/Penguin/FreeRTOS/include/portable.h:
 
-c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/NDS/portmacro.h:
+c:/micro/Penguin/FreeRTOS/NDS/portmacro.h:
 
-c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/include/mpu_wrappers.h:
+c:/micro/Penguin/FreeRTOS/include/mpu_wrappers.h:
 
-c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/include/task.h:
+c:/micro/Penguin/FreeRTOS/include/task.h:
 
-c:/Users/Misaka/workspaceB/Peguin/FreeRTOS/include/list.h:
+c:/micro/Penguin/FreeRTOS/include/list.h:
 
 c:/devkitPro/libnds/include/nds.h:
 
