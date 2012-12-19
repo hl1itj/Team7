@@ -9,8 +9,10 @@ extern "C"{
 #endif
 
 // Backgrounds:
-extern const PA_BgStruct start;
 extern const PA_BgStruct map;
+extern const PA_BgStruct start;
+extern const PA_BgStruct snowScreen1;
+extern const PA_BgStruct snowScreen2;
 
 // Palettes:
 

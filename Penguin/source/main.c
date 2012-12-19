@@ -10,13 +10,10 @@
 #include <PA9.h>
 #include "all_gfx.h"
 
-<<<<<<< HEAD
 void initScreen();
-void readyScreen();
-=======
-void screen();
->>>>>>> 28c48b7f82845319441174504265659accd63390
-
+void mainScreen();
+void goStraight();
+int i= 0;
 int main(){
 	// Initialize PAlib
 	PA_Init();
@@ -27,12 +24,13 @@ int main(){
 	while(1){
 		// Put your game logic here
 
-<<<<<<< HEAD
 		initScreen();
-		readyScreen();
-=======
-		screen();
->>>>>>> 28c48b7f82845319441174504265659accd63390
+		mainScreen();
+
+		while(1){
+
+			goStraight();
+		}
 		// Wait until the next frame.
 		// The DS runs at 60 frames per second.
 		PA_WaitForVBL();

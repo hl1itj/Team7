@@ -1,12 +1,14 @@
 #include <PA9.h>
 #include "all_gfx.h"
 
-void screen() {
 
-	PA_Init();
-	PA_InitVBL();
+#define UP_SCREEN 1
+#define DOWN_SCREEN 0
 
-	PA_LoadBackground(1, 1, &map);
+#define BACKGROUND_UP 1
+#define BACKGROUND_DOWN 0
+
+#define START_NUM 0
 
 void initScreen() {
 
@@ -16,8 +18,7 @@ void initScreen() {
 
 }
 
-<<<<<<< HEAD
-void readyScreen() {
+void mainScreen() {
 
 	while (1) {
 
@@ -25,7 +26,8 @@ void readyScreen() {
 
 			PA_DeleteBg(DOWN_SCREEN, BACKGROUND_DOWN);
 			PA_DeleteSprite(DOWN_SCREEN, START_NUM);
-			PA_LoadBackground(DOWN_SCREEN, BACKGROUND_DOWN, &map);
+			PA_LoadBackground(UP_SCREEN, BACKGROUND_UP, &map);
+
 			break;
 
 		}
@@ -33,6 +35,23 @@ void readyScreen() {
 		PA_WaitForVBL();
 
 	}
-=======
->>>>>>> 28c48b7f82845319441174504265659accd63390
+}
+
+void goStraight() {
+
+	while (1) {
+
+		//PA_DeleteBg(DOWN_SCREEN, BACKGROUND_DOWN);
+		//PA_DeleteSprite(DOWN_SCREEN, START_NUM);
+		PA_LoadBackground(DOWN_SCREEN, BACKGROUND_UP, &snowScreen1);
+
+		PA_LoadBackground(DOWN_SCREEN, BACKGROUND_UP, &snowScreen2);
+
+	}
+
+}
+
+void bgSound() {
+
+}
 }
