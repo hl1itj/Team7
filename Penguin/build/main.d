@@ -1,5 +1,17 @@
 main.o: c:/micro/Penguin/source/main.c \
- c:/devkitPro/PAlib/include/nds/PA9.h c:/devkitPro/libnds/include/nds.h \
+ c:/micro/Penguin/FreeRTOS/include/FreeRTOS.h \
+ c:/micro/Penguin/FreeRTOS/include/projdefs.h \
+ c:/micro/Penguin/FreeRTOS/NDS/FreeRTOSConfig.h \
+ c:/micro/Penguin/FreeRTOS/include/portable.h \
+ c:/micro/Penguin/FreeRTOS/NDS/portmacro.h \
+ c:/micro/Penguin/FreeRTOS/include/mpu_wrappers.h \
+ c:/micro/Penguin/FreeRTOS/include/task.h \
+ c:/micro/Penguin/FreeRTOS/include/list.h \
+ c:/micro/Penguin/FreeRTOS/include/semphr.h \
+ c:/micro/Penguin/FreeRTOS/include/queue.h c:/micro/Penguin/gfx/all_gfx.h \
+ c:/devkitPro/PAlib/include/nds/PA_BgStruct.h \
+ c:/micro/Penguin/FreeRTOS/NDS/card_spi.h \
+ c:/devkitPro/libnds/include/nds.h \
  c:/devkitPro/libnds/include/nds/libversion.h \
  c:/devkitPro/libnds/include/nds/ndstypes.h \
  c:/devkitPro/libnds/include/nds/bios.h \
@@ -54,13 +66,14 @@ main.o: c:/micro/Penguin/source/main.c \
  c:/devkitPro/libnds/include/nds/arm9/trig_lut.h \
  c:/devkitPro/libnds/include/nds/arm9/video.h \
  c:/devkitPro/libnds/include/nds/arm9/videoGL.h \
- c:/devkitPro/libnds/include/fat.h \
+ c:/micro/Penguin/FreeRTOS/NDS/gdbStub.h \
+ c:/micro/Penguin/FreeRTOS/NDS/gdbStubAsm.h \
+ c:/devkitPro/PAlib/include/nds/PA9.h c:/devkitPro/libnds/include/fat.h \
  c:/devkitPro/libnds/include/libfatversion.h \
  c:/devkitPro/libnds/include/nds/disc_io.h \
  c:/devkitPro/libnds/include/filesystem.h \
  c:/devkitPro/PAlib/include/nds/PA_IPC.h \
  c:/devkitPro/PAlib/include/nds/PA_FifoMessages.h \
- c:/devkitPro/PAlib/include/nds/PA_BgStruct.h \
  c:/devkitPro/PAlib/include/nds/arm9/jpeg.h \
  c:/devkitPro/PAlib/include/nds/arm9/PA_Assert.h \
  c:/devkitPro/PAlib/include/nds/arm9/PA_General.h \
@@ -119,10 +132,33 @@ main.o: c:/micro/Penguin/source/main.c \
  c:/devkitPro/PAlib/include/nds/arm9/PA_KeysSpecial.h \
  c:/devkitPro/PAlib/include/nds/arm9/PA_Fake16bit.h \
  c:/devkitPro/PAlib/include/nds/arm9/PA_Debug.h \
- c:/devkitPro/PAlib/include/nds/arm9/as_lib9.h \
- c:/micro/Penguin/gfx/all_gfx.h
+ c:/devkitPro/PAlib/include/nds/arm9/as_lib9.h
 
-c:/devkitPro/PAlib/include/nds/PA9.h:
+c:/micro/Penguin/FreeRTOS/include/FreeRTOS.h:
+
+c:/micro/Penguin/FreeRTOS/include/projdefs.h:
+
+c:/micro/Penguin/FreeRTOS/NDS/FreeRTOSConfig.h:
+
+c:/micro/Penguin/FreeRTOS/include/portable.h:
+
+c:/micro/Penguin/FreeRTOS/NDS/portmacro.h:
+
+c:/micro/Penguin/FreeRTOS/include/mpu_wrappers.h:
+
+c:/micro/Penguin/FreeRTOS/include/task.h:
+
+c:/micro/Penguin/FreeRTOS/include/list.h:
+
+c:/micro/Penguin/FreeRTOS/include/semphr.h:
+
+c:/micro/Penguin/FreeRTOS/include/queue.h:
+
+c:/micro/Penguin/gfx/all_gfx.h:
+
+c:/devkitPro/PAlib/include/nds/PA_BgStruct.h:
+
+c:/micro/Penguin/FreeRTOS/NDS/card_spi.h:
 
 c:/devkitPro/libnds/include/nds.h:
 
@@ -234,6 +270,12 @@ c:/devkitPro/libnds/include/nds/arm9/video.h:
 
 c:/devkitPro/libnds/include/nds/arm9/videoGL.h:
 
+c:/micro/Penguin/FreeRTOS/NDS/gdbStub.h:
+
+c:/micro/Penguin/FreeRTOS/NDS/gdbStubAsm.h:
+
+c:/devkitPro/PAlib/include/nds/PA9.h:
+
 c:/devkitPro/libnds/include/fat.h:
 
 c:/devkitPro/libnds/include/libfatversion.h:
@@ -245,8 +287,6 @@ c:/devkitPro/libnds/include/filesystem.h:
 c:/devkitPro/PAlib/include/nds/PA_IPC.h:
 
 c:/devkitPro/PAlib/include/nds/PA_FifoMessages.h:
-
-c:/devkitPro/PAlib/include/nds/PA_BgStruct.h:
 
 c:/devkitPro/PAlib/include/nds/arm9/jpeg.h:
 
@@ -365,5 +405,3 @@ c:/devkitPro/PAlib/include/nds/arm9/PA_Fake16bit.h:
 c:/devkitPro/PAlib/include/nds/arm9/PA_Debug.h:
 
 c:/devkitPro/PAlib/include/nds/arm9/as_lib9.h:
-
-c:/micro/Penguin/gfx/all_gfx.h:

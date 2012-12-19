@@ -1,6 +1,10 @@
 #include <PA9.h>
 #include "all_gfx.h"
-
+#include "freeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include <nds.h>
+#include "sevencore_io.h"
 
 #define UP_SCREEN 1
 #define DOWN_SCREEN 0
@@ -37,21 +41,4 @@ void mainScreen() {
 	}
 }
 
-void goStraight() {
 
-	while (1) {
-
-		//PA_DeleteBg(DOWN_SCREEN, BACKGROUND_DOWN);
-		//PA_DeleteSprite(DOWN_SCREEN, START_NUM);
-		PA_LoadBackground(DOWN_SCREEN, BACKGROUND_UP, &snowScreen1);
-
-		PA_LoadBackground(DOWN_SCREEN, BACKGROUND_UP, &snowScreen2);
-
-	}
-
-}
-
-void bgSound() {
-
-}
-}

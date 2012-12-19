@@ -120,7 +120,17 @@ screen.o: c:/micro/Penguin/source/screen.c \
  c:/devkitPro/PAlib/include/nds/arm9/PA_Fake16bit.h \
  c:/devkitPro/PAlib/include/nds/arm9/PA_Debug.h \
  c:/devkitPro/PAlib/include/nds/arm9/as_lib9.h \
- c:/micro/Penguin/gfx/all_gfx.h
+ c:/micro/Penguin/gfx/all_gfx.h \
+ c:/micro/Penguin/FreeRTOS/include/freeRTOS.h \
+ c:/micro/Penguin/FreeRTOS/include/projdefs.h \
+ c:/micro/Penguin/FreeRTOS/NDS/FreeRTOSConfig.h \
+ c:/micro/Penguin/FreeRTOS/include/portable.h \
+ c:/micro/Penguin/FreeRTOS/NDS/portmacro.h \
+ c:/micro/Penguin/FreeRTOS/include/mpu_wrappers.h \
+ c:/micro/Penguin/FreeRTOS/include/task.h \
+ c:/micro/Penguin/FreeRTOS/include/list.h \
+ c:/micro/Penguin/FreeRTOS/include/queue.h \
+ c:/micro/Penguin/FreeRTOS/NDS/sevencore_io.h
 
 c:/devkitPro/PAlib/include/nds/PA9.h:
 
@@ -367,3 +377,23 @@ c:/devkitPro/PAlib/include/nds/arm9/PA_Debug.h:
 c:/devkitPro/PAlib/include/nds/arm9/as_lib9.h:
 
 c:/micro/Penguin/gfx/all_gfx.h:
+
+c:/micro/Penguin/FreeRTOS/include/freeRTOS.h:
+
+c:/micro/Penguin/FreeRTOS/include/projdefs.h:
+
+c:/micro/Penguin/FreeRTOS/NDS/FreeRTOSConfig.h:
+
+c:/micro/Penguin/FreeRTOS/include/portable.h:
+
+c:/micro/Penguin/FreeRTOS/NDS/portmacro.h:
+
+c:/micro/Penguin/FreeRTOS/include/mpu_wrappers.h:
+
+c:/micro/Penguin/FreeRTOS/include/task.h:
+
+c:/micro/Penguin/FreeRTOS/include/list.h:
+
+c:/micro/Penguin/FreeRTOS/include/queue.h:
+
+c:/micro/Penguin/FreeRTOS/NDS/sevencore_io.h:
