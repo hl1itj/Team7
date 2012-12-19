@@ -4,11 +4,13 @@ If you have suggestions, problems or anything please come to the PAlib forums
 Converting PAGfx.ini
 Transparent Color: Magenta
 
-1 backgrounds:
+2 backgrounds:
   start : EasyBg, 256x192, Pal: start_Pal, 182 tiles -> start_Tiles and start_Map
+  map : EasyBg, 256x192, Pal: map_Pal, 165 tiles -> map_Tiles and map_Map
 
-1 palettes:
+2 palettes:
   start_Pal, 67 colors
+  map_Pal, 50 colors
 
 Converted in 0 minutes and 0 seconds
 
