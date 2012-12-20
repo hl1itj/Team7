@@ -10,7 +10,7 @@
 #include "jump.h"
 #include "sg.h"
 #include <nds.h>
-#include <PA9.h>
+#include <PA9.h> // 필수 헤더파일들
 
 #define UP_SCREEN 1
 #define DOWN_SCREEN 0
