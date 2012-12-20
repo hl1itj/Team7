@@ -5,22 +5,23 @@ Converting PAGfx.ini
 Transparent Color: Magenta
 
 2 sprites:
-  obstacle: 256colors, 64x64, Pal: obstacle_Pal, -> obstacle_Sprite
   PenguinSprite: 256colors, 32x128, Pal: PenguinSprite_Pal, -> PenguinSprite_Sprite
+  obstacle: 256colors, 64x64, Pal: obstacle_Pal, -> obstacle_Sprite
 
-8 backgrounds:
+9 backgrounds:
   curveScreen1 : EasyBg, 256x192, Pal: curveScreen1_Pal, 168 tiles -> curveScreen1_Tiles and curveScreen1_Map
   curveScreen2 : EasyBg, 256x192, Pal: curveScreen2_Pal, 157 tiles -> curveScreen2_Tiles and curveScreen2_Map
   curveScreen3 : EasyBg, 256x192, Pal: curveScreen3_Pal, 117 tiles -> curveScreen3_Tiles and curveScreen3_Map
   curveScreen4 : EasyBg, 256x200, Pal: curveScreen4_Pal, 99 tiles -> curveScreen4_Tiles and curveScreen4_Map
   map : EasyBg, 256x192, Pal: map_Pal, 158 tiles -> map_Tiles and map_Map
-  snowScreen1 : EasyBg, 256x192, Pal: snowScreen1_Pal, 101 tiles -> snowScreen1_Tiles and snowScreen1_Map
+  snowScreen1 : EasyBg, 256x192, Pal: snowScreen1_Pal, 98 tiles -> snowScreen1_Tiles and snowScreen1_Map
   snowScreen2 : EasyBg, 256x192, Pal: snowScreen2_Pal, 96 tiles -> snowScreen2_Tiles and snowScreen2_Map
   start : EasyBg, 256x192, Pal: start_Pal, 182 tiles -> start_Tiles and start_Map
+  gameOver : EasyBg, 256x192, Pal: gameOver_Pal, 59 tiles -> gameOver_Tiles and gameOver_Map
 
-10 palettes:
-  obstacle_Pal, 42 colors
+11 palettes:
   PenguinSprite_Pal, 40 colors
+  obstacle_Pal, 42 colors
   curveScreen1_Pal, 43 colors
   curveScreen2_Pal, 42 colors
   curveScreen3_Pal, 42 colors
@@ -29,6 +30,7 @@ Transparent Color: Magenta
   snowScreen1_Pal, 21 colors
   snowScreen2_Pal, 17 colors
   start_Pal, 67 colors
+  gameOver_Pal, 14 colors
 
 Converted in 0 minutes and 0 seconds
 

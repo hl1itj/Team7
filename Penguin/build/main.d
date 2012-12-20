@@ -1,16 +1,17 @@
-main.o: c:/micro/Penguin/source/main.c \
- c:/micro/Penguin/FreeRTOS/include/FreeRTOS.h \
- c:/micro/Penguin/FreeRTOS/include/projdefs.h \
- c:/micro/Penguin/FreeRTOS/NDS/FreeRTOSConfig.h \
- c:/micro/Penguin/FreeRTOS/include/portable.h \
- c:/micro/Penguin/FreeRTOS/NDS/portmacro.h \
- c:/micro/Penguin/FreeRTOS/include/mpu_wrappers.h \
- c:/micro/Penguin/FreeRTOS/include/task.h \
- c:/micro/Penguin/FreeRTOS/include/list.h \
- c:/micro/Penguin/FreeRTOS/include/semphr.h \
- c:/micro/Penguin/FreeRTOS/include/queue.h c:/micro/Penguin/gfx/all_gfx.h \
+main.o: c:/Users/Misaka/Desktop/Penguin-최종/source/main.c \
+ c:/Users/Misaka/Desktop/Penguin-최종/FreeRTOS/include/FreeRTOS.h \
+ c:/Users/Misaka/Desktop/Penguin-최종/FreeRTOS/include/projdefs.h \
+ c:/Users/Misaka/Desktop/Penguin-최종/FreeRTOS/NDS/FreeRTOSConfig.h \
+ c:/Users/Misaka/Desktop/Penguin-최종/FreeRTOS/include/portable.h \
+ c:/Users/Misaka/Desktop/Penguin-최종/FreeRTOS/NDS/portmacro.h \
+ c:/Users/Misaka/Desktop/Penguin-최종/FreeRTOS/include/mpu_wrappers.h \
+ c:/Users/Misaka/Desktop/Penguin-최종/FreeRTOS/include/task.h \
+ c:/Users/Misaka/Desktop/Penguin-최종/FreeRTOS/include/list.h \
+ c:/Users/Misaka/Desktop/Penguin-최종/FreeRTOS/include/semphr.h \
+ c:/Users/Misaka/Desktop/Penguin-최종/FreeRTOS/include/queue.h \
+ c:/Users/Misaka/Desktop/Penguin-최종/gfx/all_gfx.h \
  c:/devkitPro/PAlib/include/nds/PA_BgStruct.h \
- c:/micro/Penguin/FreeRTOS/NDS/card_spi.h \
+ c:/Users/Misaka/Desktop/Penguin-최종/FreeRTOS/NDS/card_spi.h \
  c:/devkitPro/libnds/include/nds.h \
  c:/devkitPro/libnds/include/nds/libversion.h \
  c:/devkitPro/libnds/include/nds/ndstypes.h \
@@ -66,8 +67,12 @@ main.o: c:/micro/Penguin/source/main.c \
  c:/devkitPro/libnds/include/nds/arm9/trig_lut.h \
  c:/devkitPro/libnds/include/nds/arm9/video.h \
  c:/devkitPro/libnds/include/nds/arm9/videoGL.h \
- c:/micro/Penguin/FreeRTOS/NDS/gdbStub.h \
- c:/micro/Penguin/FreeRTOS/NDS/gdbStubAsm.h c:/micro/Penguin/build/bgm.h \
+ c:/Users/Misaka/Desktop/Penguin-최종/FreeRTOS/NDS/gdbStub.h \
+ c:/Users/Misaka/Desktop/Penguin-최종/FreeRTOS/NDS/gdbStubAsm.h \
+ c:/Users/Misaka/Desktop/Penguin-최종/build/bgm.h \
+ c:/Users/Misaka/Desktop/Penguin-최종/build/kkk.h \
+ c:/Users/Misaka/Desktop/Penguin-최종/build/jump.h \
+ c:/Users/Misaka/Desktop/Penguin-최종/build/sg.h \
  c:/devkitPro/PAlib/include/nds/PA9.h c:/devkitPro/libnds/include/fat.h \
  c:/devkitPro/libnds/include/libfatversion.h \
  c:/devkitPro/libnds/include/nds/disc_io.h \
@@ -134,31 +139,31 @@ main.o: c:/micro/Penguin/source/main.c \
  c:/devkitPro/PAlib/include/nds/arm9/PA_Debug.h \
  c:/devkitPro/PAlib/include/nds/arm9/as_lib9.h
 
-c:/micro/Penguin/FreeRTOS/include/FreeRTOS.h:
+c:/Users/Misaka/Desktop/Penguin-최종/FreeRTOS/include/FreeRTOS.h:
 
-c:/micro/Penguin/FreeRTOS/include/projdefs.h:
+c:/Users/Misaka/Desktop/Penguin-최종/FreeRTOS/include/projdefs.h:
 
-c:/micro/Penguin/FreeRTOS/NDS/FreeRTOSConfig.h:
+c:/Users/Misaka/Desktop/Penguin-최종/FreeRTOS/NDS/FreeRTOSConfig.h:
 
-c:/micro/Penguin/FreeRTOS/include/portable.h:
+c:/Users/Misaka/Desktop/Penguin-최종/FreeRTOS/include/portable.h:
 
-c:/micro/Penguin/FreeRTOS/NDS/portmacro.h:
+c:/Users/Misaka/Desktop/Penguin-최종/FreeRTOS/NDS/portmacro.h:
 
-c:/micro/Penguin/FreeRTOS/include/mpu_wrappers.h:
+c:/Users/Misaka/Desktop/Penguin-최종/FreeRTOS/include/mpu_wrappers.h:
 
-c:/micro/Penguin/FreeRTOS/include/task.h:
+c:/Users/Misaka/Desktop/Penguin-최종/FreeRTOS/include/task.h:
 
-c:/micro/Penguin/FreeRTOS/include/list.h:
+c:/Users/Misaka/Desktop/Penguin-최종/FreeRTOS/include/list.h:
 
-c:/micro/Penguin/FreeRTOS/include/semphr.h:
+c:/Users/Misaka/Desktop/Penguin-최종/FreeRTOS/include/semphr.h:
 
-c:/micro/Penguin/FreeRTOS/include/queue.h:
+c:/Users/Misaka/Desktop/Penguin-최종/FreeRTOS/include/queue.h:
 
-c:/micro/Penguin/gfx/all_gfx.h:
+c:/Users/Misaka/Desktop/Penguin-최종/gfx/all_gfx.h:
 
 c:/devkitPro/PAlib/include/nds/PA_BgStruct.h:
 
-c:/micro/Penguin/FreeRTOS/NDS/card_spi.h:
+c:/Users/Misaka/Desktop/Penguin-최종/FreeRTOS/NDS/card_spi.h:
 
 c:/devkitPro/libnds/include/nds.h:
 
@@ -270,11 +275,17 @@ c:/devkitPro/libnds/include/nds/arm9/video.h:
 
 c:/devkitPro/libnds/include/nds/arm9/videoGL.h:
 
-c:/micro/Penguin/FreeRTOS/NDS/gdbStub.h:
+c:/Users/Misaka/Desktop/Penguin-최종/FreeRTOS/NDS/gdbStub.h:
 
-c:/micro/Penguin/FreeRTOS/NDS/gdbStubAsm.h:
+c:/Users/Misaka/Desktop/Penguin-최종/FreeRTOS/NDS/gdbStubAsm.h:
 
-c:/micro/Penguin/build/bgm.h:
+c:/Users/Misaka/Desktop/Penguin-최종/build/bgm.h:
+
+c:/Users/Misaka/Desktop/Penguin-최종/build/kkk.h:
+
+c:/Users/Misaka/Desktop/Penguin-최종/build/jump.h:
+
+c:/Users/Misaka/Desktop/Penguin-최종/build/sg.h:
 
 c:/devkitPro/PAlib/include/nds/PA9.h:
 
